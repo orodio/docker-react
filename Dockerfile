@@ -1,8 +1,8 @@
 FROM node:alpine as builder
 WORKDIR '/app'
-COPY package.json .
+COPY package*.json ./
 RUN npm install
-COPY . .
+COPY ./ ./
 # output: /app/build
 RUN npm run build
 
